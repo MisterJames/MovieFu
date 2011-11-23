@@ -1,0 +1,37 @@
+@model MovieFu.Models.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Model.Title</h2>
+
+<fieldset>
+    <legend>Description</legend>
+
+    <p>@Model.Description</p>
+
+    <div class="display-label">Average Rating: @Html.RatingsText(Model.Ratings)</div>
+        
+</fieldset>
+
+<h2>Your Rating</h2>
+@{Html.RenderAction("RatingAdd", new {movieId = @Model.MovieID});}
+
+<h2>Ratings</h2>
+    @foreach (var rating in Model.Ratings)
+    {
+        <hr />
+        <p><b>@rating.UserName gave @rating.Stars.ToString() stars.</b></p>
+        <p>@rating.Comments</p>
+    }
+
+
+
+
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MovieFu.Models.Movie>
+
+<table>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Average Rating
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.Title, "Details", "Movies", new { id = item.MovieID }, null)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.RatingsText(item.Ratings)
+        </td>
+    </tr>
+}
+
+</table>
