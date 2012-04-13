@@ -10,7 +10,7 @@ using MovieFu.Areas.MvcMembership.Models.UserAdministration;
 
 namespace MovieFu.Areas.MvcMembership.Controllers
 {
-	[AuthorizeUnlessOnlyUser(Roles = "Administrator")] // allows access if you're the only user, only validates role if role provider is enabled
+	[AuthorizeUnlessOnlyUser(Roles = "Admin")] // allows access if you're the only user, only validates role if role provider is enabled
 	public class UserAdministrationController : Controller
 	{
 		private const int PageSize = 10;
