@@ -6,3 +6,4 @@ obj
 *.user
 Thumbs.db
 SubmissionInfo
+authconfig.cs
