@@ -22,9 +22,9 @@ namespace MovieFu
             //    consumerKey: "",
             //    consumerSecret: "");
 
-            OAuthWebSecurity.RegisterFacebookClient(
-                appId: "",
-                appSecret: "");
+            //OAuthWebSecurity.RegisterFacebookClient(
+            //    appId: "",
+            //    appSecret: "");
 
             //OAuthWebSecurity.RegisterGoogleClient();
         }
